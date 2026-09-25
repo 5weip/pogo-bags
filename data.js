@@ -191,7 +191,7 @@ window.POGO_DATA = (function() {
       tag: "2026 台南・13 張",
       locStamp: "Tainan",
       bgCandidates: [
-        https://assets.dittobase.com/go/backgrounds/lc-go-tour-2026-tainan.webp
+        "https://assets.dittobase.com/go/backgrounds/lc-go-tour-2026-tainan.webp"
       ],
       coverPokes: [716, 717, 448],
       filters: GOTOUR_2026_FILTERS,
