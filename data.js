@@ -14,7 +14,7 @@ window.POGO_DATA = (function() {
       ]
     },
     hoppip: {
-      label: "🌸 毽子草進化鏈", baseName: "毽子草", baseDex: 187,
+      label: "毽子草進化鏈", baseName: "毽子草", baseDex: 187,
       stages: [
         { key: "r0", name: "毽子草", dex: 187, stage: "一階" },
         { key: "r1", name: "毽子花", dex: 188, stage: "二階" },
@@ -22,7 +22,7 @@ window.POGO_DATA = (function() {
       ]
     },
     sewaddle: {
-      label: "🍃 蟲寶包進化鏈", baseName: "蟲寶包", baseDex: 540,
+      label: "蟲寶包進化鏈", baseName: "蟲寶包", baseDex: 540,
       stages: [
         { key: "r0", name: "蟲寶包", dex: 540, stage: "一階" },
         { key: "r1", name: "寶包繭", dex: 541, stage: "二階" },
@@ -30,14 +30,14 @@ window.POGO_DATA = (function() {
       ]
     },
     pineco: {
-      label: "🌲 榛果球進化鏈", baseName: "榛果球", baseDex: 204,
+      label: "榛果球進化鏈", baseName: "榛果球", baseDex: 204,
       stages: [
         { key: "r0", name: "榛果球", dex: 204, stage: "一階" },
         { key: "r1", name: "佛烈托斯", dex: 205, stage: "二階" }
       ]
     },
     seedot: {
-      label: "🌰 西南頭目：橡實果進化鏈", baseName: "橡實果", baseDex: 273,
+      label: "橡實果進化鏈", baseName: "橡實果", baseDex: 273,
       stages: [
         { key: "r0", name: "橡實果", dex: 273, stage: "一階" },
         { key: "r1", name: "長鼻葉", dex: 274, stage: "二階" },
@@ -47,7 +47,7 @@ window.POGO_DATA = (function() {
 
     // --- 2026 GO Tour：白天團體戰 (7 隻) ---
     honedge: {
-      label: "☀️ 白天一星團戰：獨劍鞘進化鏈", baseName: "獨劍鞘", baseDex: 679,
+      label: "☀️獨劍鞘進化鏈", baseName: "獨劍鞘", baseDex: 679,
       stages: [
         { key: "s0", name: "獨劍鞘", dex: 679, stage: "一階" },
         { key: "s1", name: "雙劍鞘", dex: 680, stage: "二階" },
@@ -55,53 +55,53 @@ window.POGO_DATA = (function() {
       ]
     },
     xerneas: {
-      label: "☀️ 白天傳說團戰：哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716,
+      label: "☀️哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716,
       stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "傳說" }]
     },
     yveltal: {
-      label: "☀️ 白天傳說團戰：伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717,
+      label: "☀️伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717,
       stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "傳說" }]
     },
     gyarados: {
-      label: "☀️ 白天超級團戰：暴鯉龍", baseName: "暴鯉龍", baseDex: 130,
+      label: "☀️暴鯉龍", baseName: "暴鯉龍", baseDex: 130,
       stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }]
     },
     gardevoir: {
-      label: "☀️ 白天超級團戰：沙奈朵", baseName: "沙奈朵", baseDex: 282,
+      label: "☀️沙奈朵", baseName: "沙奈朵", baseDex: 282,
       stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }]
     },
     absol: {
-      label: "☀️ 白天超級團戰：阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359,
+      label: "☀️阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359,
       stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }]
     },
     lucario: {
-      label: "☀️ 白天超級團戰：路卡利歐", baseName: "路卡利歐", baseDex: 448,
+      label: "☀️路卡利歐", baseName: "路卡利歐", baseDex: 448,
       stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "頭目" }]
     },
 
     // --- 2026 GO Tour：超級之夜團體戰 (6 隻) ---
     charizard: {
-      label: "🌙 超級之夜團戰：噴火龍", baseName: "噴火龍", baseDex: 6,
+      label: "🌙超級之夜：噴火龍", baseName: "噴火龍", baseDex: 6,
       stages: [{ key: "s0", name: "噴火龍", dex: 6, stage: "頭目" }]
     },
     ampharos: {
-      label: "🌙 超級之夜團戰：電龍", baseName: "電龍", baseDex: 181,
+      label: "🌙超級之夜：電龍", baseName: "電龍", baseDex: 181,
       stages: [{ key: "s0", name: "電龍", dex: 181, stage: "頭目" }]
     },
     salamence: {
-      label: "🌙 超級之夜團戰：暴飛龍", baseName: "暴飛龍", baseDex: 373,
+      label: "🌙超級之夜：暴飛龍", baseName: "暴飛龍", baseDex: 373,
       stages: [{ key: "s0", name: "暴飛龍", dex: 373, stage: "頭目" }]
     },
     altaria: {
-      label: "🌙 超級之夜團戰：七夕青鳥", baseName: "七夕青鳥", baseDex: 334,
+      label: "🌙超級之夜：七夕青鳥", baseName: "七夕青鳥", baseDex: 334,
       stages: [{ key: "s0", name: "七夕青鳥", dex: 334, stage: "頭目" }]
     },
     garchomp: {
-      label: "🌙 超級之夜團戰：烈咬陸鯊", baseName: "烈咬陸鯊", baseDex: 445,
+      label: "🌙超級之夜：烈咬陸鯊", baseName: "烈咬陸鯊", baseDex: 445,
       stages: [{ key: "s0", name: "烈咬陸鯊", dex: 445, stage: "頭目" }]
     },
     sceptile: {
-      label: "🌙 超級之夜團戰：蜥蜴王", baseName: "蜥蜴王", baseDex: 254,
+      label: "🌙超級之夜：蜥蜴王", baseName: "蜥蜴王", baseDex: 254,
       stages: [{ key: "s0", name: "蜥蜴王", dex: 254, stage: "頭目" }]
     }
   };
@@ -109,13 +109,13 @@ window.POGO_DATA = (function() {
   // 2. 2026 GO Tour 台南 & 洛杉磯共用團戰名單 (白天 7 隻 + 超級之夜 6 隻 = 13 隻)
   var GOTOUR_2026_ROSTER = [
     // 白天團戰 (DAY)
-    { id: "P01", zone: "DAY", fam: "xerneas", note: "☀️ 白天團戰" },
-    { id: "P02", zone: "DAY", fam: "yveltal", note: "☀️ 白天團戰" },
-    { id: "P03", zone: "DAY", fam: "honedge", note: "☀️ 白天團戰" },
-    { id: "P04", zone: "DAY", fam: "gyarados", note: "☀️ 白天團戰" },
-    { id: "P05", zone: "DAY", fam: "gardevoir", note: "☀️ 白天團戰" },
-    { id: "P06", zone: "DAY", fam: "absol", note: "☀️ 白天團戰" },
-    { id: "P07", zone: "DAY", fam: "lucario", note: "☀️ 白天團戰" },
+    { id: "P01", zone: "DAY", fam: "xerneas", note: "☀️" },
+    { id: "P02", zone: "DAY", fam: "yveltal", note: "☀️" },
+    { id: "P03", zone: "DAY", fam: "honedge", note: "☀️" },
+    { id: "P04", zone: "DAY", fam: "gyarados", note: "☀️" },
+    { id: "P05", zone: "DAY", fam: "gardevoir", note: "☀️" },
+    { id: "P06", zone: "DAY", fam: "absol", note: "☀️" },
+    { id: "P07", zone: "DAY", fam: "lucario", note: "☀️" },
     // 超級之夜 (NIGHT)
     { id: "P08", zone: "NIGHT", fam: "charizard", note: "🌙 超級之夜" },
     { id: "P09", zone: "NIGHT", fam: "ampharos", note: "🌙 超級之夜" },
@@ -127,7 +127,7 @@ window.POGO_DATA = (function() {
 
   var GOTOUR_2026_FILTERS = [
     { key: "ALL", label: "全部(13)" },
-    { key: "DAY", label: "☀️ 白天團戰(7)" },
+    { key: "DAY", label: "☀️(7)" },
     { key: "NIGHT", label: "🌙 超級之夜(6)" },
     { key: "MISS", label: "未收齊" }
   ];
@@ -191,7 +191,7 @@ window.POGO_DATA = (function() {
       tag: "2026 台南・13 張",
       locStamp: "Tainan",
       bgCandidates: [
-        DITTO + "lc-go-tour-2026-tainan.png"
+        https://assets.dittobase.com/go/backgrounds/lc-go-tour-2026-tainan.webp
       ],
       coverPokes: [716, 717, 448],
       filters: GOTOUR_2026_FILTERS,
@@ -206,7 +206,7 @@ window.POGO_DATA = (function() {
       tag: "2026 洛杉磯・13 張",
       locStamp: "Los Angeles",
       bgCandidates: [
-        DITTO + "lc-go-tour-2026-los-angeles.png"
+        DITTO + "lc-go-tour-2026-los-angeles.webp"
       ],
       coverPokes: [716, 717, 445],
       filters: GOTOUR_2026_FILTERS,
