@@ -26,7 +26,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 
   function T(s) { return s.replace(/«/g, LT).replace(/»/g, GT); }
 
-  // 真正的 HTML 字元消毒函式：使用動態字元拼接，防止聊天室介面將實體字元自動解碼成 """ 導致語法錯誤
+ 
   function escapeHtml(str) {
     return String(str)
       .replace(/&/g, AMP + "amp;")
@@ -38,7 +38,7 @@ Released under the MIT license: http://jsbin.mit-license.org
       .replace(/»/g, AMP + "gt;");
   }
 
-  // 註：此 Policy 僅為允許於開啟 TrustedTypes 之瀏覽器環境渲染本地模板，非 XSS 過濾器（動態資料皆已透過 escapeHtml 消毒）
+  
   var ttPolicy = null;
   if (window.trustedTypes && window.trustedTypes.createPolicy) {
     try {
@@ -140,7 +140,7 @@ Released under the MIT license: http://jsbin.mit-license.org
     "  «/div»",
     "«/header»",
     "«div class='toolbar'»",
-    "  «input type='search' id='q' class='search' aria-label='搜尋莊園英文、中文名稱或代號' placeholder='🔍 搜尋地名或代號...'»",
+    "  «input type='search' id='q' class='search' aria-label='搜尋莊園英文、中文名稱或代號' placeholder='🔍 搜尋'»",
     "  «button type='button' class='btn active' data-z='ALL'»全部(27)«/button»",
     "  «button type='button' class='btn' data-z='S'»毽子草(6)«/button»",
     "  «button type='button' class='btn' data-z='M'»蟲寶包(8)«/button»",
@@ -425,7 +425,7 @@ Released under the MIT license: http://jsbin.mit-license.org
     return "«span class='evo-dots' aria-hidden='true'»" + dots + "«/span»";
   }
 
-  // 修正巢狀 role="button"：將右上角打勾鈕與下方進化鏈預覽觸發區拆為平行的兄弟元素
+  
   function buildMainCardHtml(loc, famKey, isOwned, unlockedByShinyInNorm, isShiny, dotsHtml) {
     var fam = FAMILIES[famKey];
     var bgUrl = DITTO_BASE + loc.slug + ".png";
