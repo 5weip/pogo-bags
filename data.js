@@ -56,66 +56,66 @@ window.POGO_DATA = (function() {
     },
     xerneas: {
       label: "☀️哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716,
-      stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "傳說" }]
+      stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "Boss" }]
     },
     yveltal: {
       label: "☀️伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717,
-      stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "傳說" }]
+      stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "Boss" }]
     },
     gyarados: {
       label: "☀️暴鯉龍", baseName: "暴鯉龍", baseDex: 130,
-      stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }]
+      stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "Boss" }]
     },
     gardevoir: {
       label: "☀️沙奈朵", baseName: "沙奈朵", baseDex: 282,
-      stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }]
+      stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "Boss" }]
     },
     absol: {
       label: "☀️阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359,
-      stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }]
+      stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "Boss" }]
     },
     lucario: {
       label: "☀️路卡利歐", baseName: "路卡利歐", baseDex: 448,
-      stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "頭目" }]
+      stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "Boss" }]
     },
 
     // --- 2026 GO Tour：超級之夜團體戰 (6 隻) ---
     charizard: {
       label: "🌙超級之夜：噴火龍", baseName: "噴火龍", baseDex: 6,
-      stages: [{ key: "s0", name: "噴火龍", dex: 6, stage: "頭目" }]
+      stages: [{ key: "s0", name: "噴火龍", dex: 6, stage: "Boss" }]
     },
     ampharos: {
       label: "🌙超級之夜：電龍", baseName: "電龍", baseDex: 181,
-      stages: [{ key: "s0", name: "電龍", dex: 181, stage: "頭目" }]
+      stages: [{ key: "s0", name: "電龍", dex: 181, stage: "Boss" }]
     },
     salamence: {
       label: "🌙超級之夜：暴飛龍", baseName: "暴飛龍", baseDex: 373,
-      stages: [{ key: "s0", name: "暴飛龍", dex: 373, stage: "頭目" }]
+      stages: [{ key: "s0", name: "暴飛龍", dex: 373, stage: "Boss" }]
     },
     altaria: {
       label: "🌙超級之夜：七夕青鳥", baseName: "七夕青鳥", baseDex: 334,
-      stages: [{ key: "s0", name: "七夕青鳥", dex: 334, stage: "頭目" }]
+      stages: [{ key: "s0", name: "七夕青鳥", dex: 334, stage: "Boss" }]
     },
     garchomp: {
       label: "🌙超級之夜：烈咬陸鯊", baseName: "烈咬陸鯊", baseDex: 445,
-      stages: [{ key: "s0", name: "烈咬陸鯊", dex: 445, stage: "頭目" }]
+      stages: [{ key: "s0", name: "烈咬陸鯊", dex: 445, stage: "Boss" }]
     },
     sceptile: {
       label: "🌙超級之夜：蜥蜴王", baseName: "蜥蜴王", baseDex: 254,
-      stages: [{ key: "s0", name: "蜥蜴王", dex: 254, stage: "頭目" }]
+      stages: [{ key: "s0", name: "蜥蜴王", dex: 254, stage: "Boss" }]
     }
   };
 
   // 2. 2026 GO Tour 台南 & 洛杉磯共用團戰名單 (白天 7 隻 + 超級之夜 6 隻 = 13 隻)
   var GOTOUR_2026_ROSTER = [
     // 白天團戰 (DAY)
-    { id: "P01", zone: "DAY", fam: "xerneas", note: "☀️" },
-    { id: "P02", zone: "DAY", fam: "yveltal", note: "☀️" },
-    { id: "P03", zone: "DAY", fam: "honedge", note: "☀️" },
-    { id: "P04", zone: "DAY", fam: "gyarados", note: "☀️" },
-    { id: "P05", zone: "DAY", fam: "gardevoir", note: "☀️" },
-    { id: "P06", zone: "DAY", fam: "absol", note: "☀️" },
-    { id: "P07", zone: "DAY", fam: "lucario", note: "☀️" },
+    { id: "P01", zone: "DAY", fam: "xerneas"},
+    { id: "P02", zone: "DAY", fam: "yveltal"},
+    { id: "P03", zone: "DAY", fam: "honedge"},
+    { id: "P04", zone: "DAY", fam: "gyarados"},
+    { id: "P05", zone: "DAY", fam: "gardevoir"},
+    { id: "P06", zone: "DAY", fam: "absol"},
+    { id: "P07", zone: "DAY", fam: "lucario"},
     // 超級之夜 (NIGHT)
     { id: "P08", zone: "NIGHT", fam: "charizard", note: "🌙 超級之夜" },
     { id: "P09", zone: "NIGHT", fam: "ampharos", note: "🌙 超級之夜" },
@@ -139,7 +139,7 @@ window.POGO_DATA = (function() {
       type: "multi-location",
       storageKey: "nt27_v8",
       title: "🌿 英國國民信託 National Trust",
-      subtitle: "27 座英國古蹟莊園 × 木守宮＆四區限定團體戰",
+      subtitle: "27 座英國古蹟莊園 木守宮＆限定團體戰",
       tag: "聯名地標・54 張",
       coverBg: DITTO + "lc-nationaltrust-cliveden.png",
       coverPokes: [252, 187, 540],
@@ -191,7 +191,7 @@ window.POGO_DATA = (function() {
       tag: "2026 台南・13 張",
       locStamp: "Tainan",
       bgCandidates: [
-        "https://assets.dittobase.com/go/backgrounds/lc-go-tour-2026-tainan.webp"
+        DITTO + "lc-go-tour-2026-tainan.webp"
       ],
       coverPokes: [716, 717, 448],
       filters: GOTOUR_2026_FILTERS,
