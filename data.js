@@ -106,7 +106,7 @@ window.POGO_DATA = (function() {
     },
     {
       id: "gotour2026_tainan", type: "single-bg", storageKey: "pogo_gotour26_tn_v1",
-      title: "🏮 2026 GO Tour：台南 (Tainan)", subtitle: "團體戰(9隻) ＋ 超級之夜(6隻)", tag: "2026 台南・15 張",
+      title: "🍬 2026 GO Tour：台南 (Tainan)", subtitle: "團體戰(9隻) ＋ 超級之夜(6隻)", tag: "2026 台南・15 張",
       homeBanner: "assets/banners/go-tour-2026-tainan.png",
       bgType: "lc", bgKey: "go-tour-2026-tainan", locStamp: "Tainan",
       coverPokes: [716, 717, 448], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER
