@@ -34,6 +34,8 @@ window.POGO_DATA = (function() {
     ] },
     xerneas: { label: "☀️哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716, stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "頭目" }] },
     yveltal: { label: "☀️伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717, stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "頭目" }] },
+    Victreebel: { label: "☀️大食花", baseName: "大食花", baseDex: 71, stages: [{ key: "s0", name: "大食花", dex: 71, stage: "頭目" }] }
+    Malamar: { label: "☀️烏賊王", baseName: "烏賊王", baseDex: 687, stages: [{ key: "s0", name: "烏賊王", dex: 687, stage: "頭目" }] }   
     gyarados: { label: "☀️暴鯉龍", baseName: "暴鯉龍", baseDex: 130, stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }] },
     gardevoir: { label: "☀️沙奈朵", baseName: "沙奈朵", baseDex: 282, stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }] },
     absol: { label: "☀️阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359, stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }] },
@@ -47,14 +49,17 @@ window.POGO_DATA = (function() {
   };
 
   var GOTOUR_2026_ROSTER = [
-    { id: "P01", zone: "DAY", fam: "xerneas" }, { id: "P02", zone: "DAY", fam: "yveltal" }, { id: "P03", zone: "DAY", fam: "honedge" },
-    { id: "P04", zone: "DAY", fam: "gyarados" }, { id: "P05", zone: "DAY", fam: "gardevoir" }, { id: "P06", zone: "DAY", fam: "absol" }, { id: "P07", zone: "DAY", fam: "lucario" },
-    { id: "P08", zone: "NIGHT", fam: "charizard", note: "🌙 超級之夜" }, { id: "P09", zone: "NIGHT", fam: "ampharos", note: "🌙 超級之夜" },
-    { id: "P10", zone: "NIGHT", fam: "salamence", note: "🌙 超級之夜" }, { id: "P11", zone: "NIGHT", fam: "altaria", note: "🌙 超級之夜" },
-    { id: "P12", zone: "NIGHT", fam: "garchomp", note: "🌙 超級之夜" }, { id: "P13", zone: "NIGHT", fam: "sceptile", note: "🌙 超級之夜" }
+    { id: "P01", zone: "DAY", fam: "xerneas", note: "☀️團體戰" }, { id: "P02", zone: "DAY", fam: "yveltal", note: "☀️團體戰" },
+    { id: "P03", zone: "DAY", fam: "honedge", note: "☀️團體戰" }, { id: "P04", zone: "DAY", fam: "Victreebel", note: "☀️團體戰" }, 
+    { id: "P05", zone: "DAY", fam: "Malamar", note: "☀️團體戰" },{ id: "P06", zone: "DAY", fam: "gyarados", note: "☀️團體戰" }, 
+    { id: "P07", zone: "DAY", fam: "gardevoir", note: "☀️團體戰" }, { id: "P08", zone: "DAY", fam: "absol", note: "☀️團體戰" }, 
+    { id: "P09", zone: "DAY", fam: "lucario", note: "☀️團體戰" },
+    { id: "P10", zone: "NIGHT", fam: "charizard", note: "🌙 超級之夜" }, { id: "P11", zone: "NIGHT", fam: "ampharos", note: "🌙 超級之夜" },
+    { id: "P12", zone: "NIGHT", fam: "salamence", note: "🌙 超級之夜" }, { id: "P13", zone: "NIGHT", fam: "altaria", note: "🌙 超級之夜" },
+    { id: "P14", zone: "NIGHT", fam: "garchomp", note: "🌙 超級之夜" }, { id: "P15", zone: "NIGHT", fam: "sceptile", note: "🌙 超級之夜" }
   ];
   var GOTOUR_2026_FILTERS = [
-    { key: "ALL", label: "全部(13)" }, { key: "DAY", label: "☀️(7)" }, { key: "NIGHT", label: "🌙 超級之夜(6)" }, { key: "MISS", label: "未收齊" }
+    { key: "ALL", label: "全部(15)" }, { key: "DAY", label: "☀️團體戰(9)" }, { key: "NIGHT", label: "🌙 超級之夜(6)" }, { key: "MISS", label: "未收齊" }
   ];
 
   // 每個地標只要給「bgKey(圖片檔名關鍵字，不含前綴跟副檔名)」，
@@ -62,7 +67,7 @@ window.POGO_DATA = (function() {
   var COLLECTIONS = [
     {
       id: "nt27", type: "multi-location", storageKey: "nt27_v8",
-      title: "🌿 英國國民信託 National Trust", subtitle: "27 座英國古蹟莊園 木守宮＆限定團體戰", tag: "聯名地標・54 張",
+      title: "🌿 英國國民信託 National Trust", subtitle: "27 座英國古蹟莊園 木守宮＆限定團體戰", tag: "國民信托・54 張",
       homeBanner: "assets/banners/national-trust.png",
       bgType: "lc",
       coverBgKey: "nationaltrust-cliveden",
@@ -101,14 +106,14 @@ window.POGO_DATA = (function() {
     },
     {
       id: "gotour2026_tainan", type: "single-bg", storageKey: "pogo_gotour26_tn_v1",
-      title: "🏮 2026 GO Tour：台南 (Tainan)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 台南・13 張",
+      title: "🏮 2026 GO Tour：台南 (Tainan)", subtitle: "團體戰(9隻) ＋ 超級之夜(6隻)", tag: "2026 台南・15 張",
       homeBanner: "assets/banners/go-tour-2026-tainan.png",
       bgType: "lc", bgKey: "go-tour-2026-tainan", locStamp: "Tainan",
       coverPokes: [716, 717, 448], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER
     },
     {
       id: "gotour2026_la", type: "single-bg", storageKey: "pogo_gotour26_la_v1",
-      title: "🌴 2026 GO Tour：洛杉磯 (Los Angeles)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 洛杉磯・13 張",
+      title: "🌴 2026 GO Tour：洛杉磯 (Los Angeles)", subtitle: "團體戰(9隻) ＋ 超級之夜(6隻)", tag: "2026 洛杉磯・15 張",
       homeBanner: "assets/banners/go-tour-2026-los-angeles.png",
       bgType: "lc", bgKey: "go-tour-2026-los-angeles", locStamp: "Los Angeles",
       coverPokes: [716, 717, 445], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER
