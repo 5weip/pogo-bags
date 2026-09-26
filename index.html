@@ -83,7 +83,7 @@ h1{font-size:1.38rem;margin-bottom:6px;color:#fff;}
 .close-btn{padding:6px 12px;border-radius:8px;border:1px solid #475569;background:#0f172a;color:#f8fafc;cursor:pointer;font-weight:700;font-size:0.8rem;}
 .evo-subbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.82rem;color:var(--sub);gap:8px;flex-wrap:wrap;}
 .check-all-btn{padding:5px 10px;border-radius:8px;border:1px solid var(--ok);background:rgba(16,185,129,0.15);color:#34d399;cursor:pointer;font-size:0.75rem;font-weight:700;}
-.evo-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;}
+.evo-row{display:grid;grid-template-columns:repeat(auto-fill,190px);justify-content:center;gap:14px;}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(15,23,42,0.95);color:#fde68a;border:1px solid var(--sh);padding:10px 18px;border-radius:99px;font-size:0.82rem;font-weight:700;z-index:200;opacity:0;pointer-events:none;transition:all 0.25s ease;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-height:1.5;}
@@ -377,7 +377,7 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
       grandMax += st.maxCards;
       var pct = st.maxCards ? Math.round(st.shinyTotal / st.maxCards * 100) : 0;
       var bgUrl = col.homeBanner || resolvedBgByCol[col.id] || "";
-      var pokesHtml = (col.coverPokes || []).map(function(dex) {
+      var pokesHtml = col.homeBanner ? "" : (col.coverPokes || []).map(function(dex) {
         return pogoImgHtml(dex, true, "封面寶可夢", "album-poke");
       }).join("");
 

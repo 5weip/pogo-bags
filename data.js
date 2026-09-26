@@ -63,7 +63,7 @@ window.POGO_DATA = (function() {
     {
       id: "nt27", type: "multi-location", storageKey: "nt27_v8",
       title: "🌿 英國國民信託 National Trust", subtitle: "27 座英國古蹟莊園 木守宮＆限定團體戰", tag: "聯名地標・54 張",
-      homeBanner: "banners/national-trust.png",
+      homeBanner: "assets/banners/national-trust.png",
       bgType: "lc",
       coverBgKey: "nationaltrust-cliveden",
       coverPokes: [252, 187, 540],
@@ -102,14 +102,14 @@ window.POGO_DATA = (function() {
     {
       id: "gotour2026_tainan", type: "single-bg", storageKey: "pogo_gotour26_tn_v1",
       title: "🏮 2026 GO Tour：台南 (Tainan)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 台南・13 張",
-      homeBanner: "banners/go-tour-2026-tainan.png",
+      homeBanner: "assets/banners/go-tour-2026-tainan.png",
       bgType: "lc", bgKey: "go-tour-2026-tainan", locStamp: "Tainan",
       coverPokes: [716, 717, 448], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER
     },
     {
       id: "gotour2026_la", type: "single-bg", storageKey: "pogo_gotour26_la_v1",
       title: "🌴 2026 GO Tour：洛杉磯 (Los Angeles)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 洛杉磯・13 張",
-      homeBanner: "banners/go-tour-2026-los-angeles.png",
+      homeBanner: "assets/banners/go-tour-2026-los-angeles.png",
       bgType: "lc", bgKey: "go-tour-2026-los-angeles", locStamp: "Los Angeles",
       coverPokes: [716, 717, 445], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER
     }
