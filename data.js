@@ -56,53 +56,53 @@ window.POGO_DATA = (function() {
     },
     xerneas: {
       label: "☀️哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716,
-      stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "Boss" }]
+      stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "頭目" }]
     },
     yveltal: {
       label: "☀️伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717,
-      stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "Boss" }]
+      stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "頭目" }]
     },
     gyarados: {
       label: "☀️暴鯉龍", baseName: "暴鯉龍", baseDex: 130,
-      stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "Boss" }]
+      stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }]
     },
     gardevoir: {
       label: "☀️沙奈朵", baseName: "沙奈朵", baseDex: 282,
-      stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "Boss" }]
+      stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }]
     },
     absol: {
       label: "☀️阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359,
-      stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "Boss" }]
+      stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }]
     },
     lucario: {
       label: "☀️路卡利歐", baseName: "路卡利歐", baseDex: 448,
-      stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "Boss" }]
+      stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "頭目" }]
     },
 
     // --- 2026 GO Tour：超級之夜團體戰 (6 隻) ---
     charizard: {
       label: "🌙超級之夜：噴火龍", baseName: "噴火龍", baseDex: 6,
-      stages: [{ key: "s0", name: "噴火龍", dex: 6, stage: "Boss" }]
+      stages: [{ key: "s0", name: "噴火龍", dex: 6, stage: "頭目" }]
     },
     ampharos: {
       label: "🌙超級之夜：電龍", baseName: "電龍", baseDex: 181,
-      stages: [{ key: "s0", name: "電龍", dex: 181, stage: "Boss" }]
+      stages: [{ key: "s0", name: "電龍", dex: 181, stage: "頭目" }]
     },
     salamence: {
       label: "🌙超級之夜：暴飛龍", baseName: "暴飛龍", baseDex: 373,
-      stages: [{ key: "s0", name: "暴飛龍", dex: 373, stage: "Boss" }]
+      stages: [{ key: "s0", name: "暴飛龍", dex: 373, stage: "頭目" }]
     },
     altaria: {
       label: "🌙超級之夜：七夕青鳥", baseName: "七夕青鳥", baseDex: 334,
-      stages: [{ key: "s0", name: "七夕青鳥", dex: 334, stage: "Boss" }]
+      stages: [{ key: "s0", name: "七夕青鳥", dex: 334, stage: "頭目" }]
     },
     garchomp: {
       label: "🌙超級之夜：烈咬陸鯊", baseName: "烈咬陸鯊", baseDex: 445,
-      stages: [{ key: "s0", name: "烈咬陸鯊", dex: 445, stage: "Boss" }]
+      stages: [{ key: "s0", name: "烈咬陸鯊", dex: 445, stage: "頭目" }]
     },
     sceptile: {
       label: "🌙超級之夜：蜥蜴王", baseName: "蜥蜴王", baseDex: 254,
-      stages: [{ key: "s0", name: "蜥蜴王", dex: 254, stage: "Boss" }]
+      stages: [{ key: "s0", name: "蜥蜴王", dex: 254, stage: "頭目" }]
     }
   };
 
