@@ -1,11 +1,6 @@
 window.POGO_DATA = (function() {
   var DITTO = "https://assets.dittobase.com/go/backgrounds/";
-
-  // 背卡分類：地區背卡 (lc) 與特別背卡 (sb)
-  var BG_PREFIXES = {
-    lc: "lc-",
-    sb: "sb-"
-  };
+  var BG_PREFIXES = { lc: "lc-", sb: "sb-" };
 
   var FAMILIES = {
     treecko: { label: "🌿 限時調查：木守宮進化鏈", baseName: "木守宮", baseDex: 252, stages: [
@@ -58,15 +53,38 @@ window.POGO_DATA = (function() {
       filters: [{ key: "ALL", label: "全部(27)" }, { key: "S", label: "毽子草(6)" }, { key: "M", label: "蟲寶包(8)" }, { key: "N", label: "榛果球(5)" }, { key: "W", label: "橡實果(8)" }, { key: "MISS", label: "未收齊" }],
       zoneToFamily: { S: "hoppip", M: "sewaddle", N: "pineco", W: "seedot" },
       locations: [
-        { id: "S01", zone: "S", eng: "Cliveden", county: "Buckinghamshire", zh: "克萊夫登莊園", slug: "cliveden" }, { id: "S02", zone: "S", eng: "Mottisfont", county: "Hampshire", zh: "莫蒂斯豐特修道院", slug: "mottisfont" }, { id: "S03", zone: "S", eng: "Nymans", county: "West Sussex", zh: "奈曼斯花園", slug: "nymans" }, { id: "S04", zone: "S", eng: "Polesden Lacey", county: "Surrey", zh: "波爾斯登萊西莊園", slug: "polesden" }, { id: "S05", zone: "S", eng: "Scotney Castle", county: "Kent", zh: "斯科特尼城堡", slug: "scotneycastle" }, { id: "S06", zone: "S", eng: "Stowe Gardens", county: "Buckinghamshire", zh: "斯托花園", slug: "stowegardenpark" },
-        { id: "M01", zone: "M", eng: "Anglesey Abbey", county: "Cambridgeshire", zh: "安格爾西修道院", slug: "angleseyabbey" }, { id: "M02", zone: "M", eng: "Attingham Park", county: "Shropshire", zh: "阿廷厄姆公園", slug: "attinghampark" }, { id: "M03", zone: "M", eng: "Belton Estate", county: "Lincolnshire", zh: "貝爾頓莊園", slug: "beltonestate" }, { id: "M04", zone: "M", eng: "Calke Abbey", county: "Derbyshire", zh: "考克修道院", slug: "calkeabbey" }, { id: "M05", zone: "M", eng: "Clumber Park", county: "Nottinghamshire", zh: "克倫伯公園", slug: "clumberpark" }, { id: "M06", zone: "M", eng: "Hanbury Hall", county: "Worcestershire", zh: "漢伯里廳", slug: "hanburyhall" }, { id: "M07", zone: "M", eng: "Hardwick Hall", county: "Derbyshire", zh: "哈德威克廳", slug: "hardwick" }, { id: "M08", zone: "M", eng: "Wimpole Estate", county: "Cambridgeshire", zh: "溫波爾莊園", slug: "wimpoleestate" },
-        { id: "N01", zone: "N", eng: "Dunham Massey", county: "Greater Manchester", zh: "鄧納姆梅西莊園", slug: "dunhammassey" }, { id: "N02", zone: "N", eng: "Fountains Abbey", county: "North Yorkshire", zh: "噴泉修道院", slug: "fountainsabbey" }, { id: "N03", zone: "N", eng: "Gibside", county: "Tyne & Wear", zh: "吉布賽德莊園", slug: "gibslide" }, { id: "N04", zone: "N", eng: "Lyme", county: "Cheshire", zh: "萊姆公園", slug: "lymepark" }, { id: "N05", zone: "N", eng: "Mount Stewart", county: "County Down", zh: "斯圖爾特山莊園", slug: "mountstewart" },
-        { id: "W01", zone: "W", eng: "Chirk Castle", county: "Wrexham", zh: "奇爾克城堡", slug: "chirk" }, { id: "W02", zone: "W", eng: "Tredegar House", county: "Newport", zh: "特雷迪加宅邸", slug: "tredegarhouse" }, { id: "W03", zone: "W", eng: "Killerton", county: "Devon", zh: "基勒頓莊園", slug: "killerton" }, { id: "W04", zone: "W", eng: "Kingston Lacy", county: "Dorset", zh: "金斯頓萊西莊園", slug: "kingstonlacy" }, { id: "W05", zone: "W", eng: "Lacock", county: "Wiltshire", zh: "萊科克修道院", slug: "lacock" }, { id: "W06", zone: "W", eng: "Stourhead", county: "Wiltshire", zh: "斯托海德花園", slug: "stourhead" }, { id: "W07", zone: "W", eng: "Trelissick", county: "Cornwall", zh: "特雷利西克花園", slug: "trelissick" }, { id: "W08", zone: "W", eng: "Tyntesfield", county: "North Somerset", zh: "廷茨菲爾德莊園", slug: "tyntesfield" }
+        { id: "S01", zone: "S", eng: "Cliveden", county: "Buckinghamshire", zh: "克萊夫登莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-cliveden.png" },
+        { id: "S02", zone: "S", eng: "Mottisfont", county: "Hampshire", zh: "莫蒂斯豐特修道院", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-mottisfont.png" },
+        { id: "S03", zone: "S", eng: "Nymans", county: "West Sussex", zh: "奈曼斯花園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-nymans.png" },
+        { id: "S04", zone: "S", eng: "Polesden Lacey", county: "Surrey", zh: "波爾斯登萊西莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-polesden.png" },
+        { id: "S05", zone: "S", eng: "Scotney Castle", county: "Kent", zh: "斯科特尼城堡", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-scotneycastle.png" },
+        { id: "S06", zone: "S", eng: "Stowe Gardens", county: "Buckinghamshire", zh: "斯托花園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-stowegardenpark.png" },
+        { id: "M01", zone: "M", eng: "Anglesey Abbey", county: "Cambridgeshire", zh: "安格爾西修道院", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-angleseyabbey.png" },
+        { id: "M02", zone: "M", eng: "Attingham Park", county: "Shropshire", zh: "阿廷厄姆公園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-attinghampark.png" },
+        { id: "M03", zone: "M", eng: "Belton Estate", county: "Lincolnshire", zh: "貝爾頓莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-beltonestate.png" },
+        { id: "M04", zone: "M", eng: "Calke Abbey", county: "Derbyshire", zh: "考克修道院", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-calkeabbey.png" },
+        { id: "M05", zone: "M", eng: "Clumber Park", county: "Nottinghamshire", zh: "克倫伯公園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-clumberpark.png" },
+        { id: "M06", zone: "M", eng: "Hanbury Hall", county: "Worcestershire", zh: "漢伯里廳", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-hanburyhall.png" },
+        { id: "M07", zone: "M", eng: "Hardwick Hall", county: "Derbyshire", zh: "哈德威克廳", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-hardwick.png" },
+        { id: "M08", zone: "M", eng: "Wimpole Estate", county: "Cambridgeshire", zh: "溫波爾莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-wimpoleestate.png" },
+        { id: "N01", zone: "N", eng: "Dunham Massey", county: "Greater Manchester", zh: "鄧納姆梅西莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-dunhammassey.png" },
+        { id: "N02", zone: "N", eng: "Fountains Abbey", county: "North Yorkshire", zh: "噴泉修道院", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-fountainsabbey.png" },
+        { id: "N03", zone: "N", eng: "Gibside", county: "Tyne & Wear", zh: "吉布賽德莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-gibslide.png" },
+        { id: "N04", zone: "N", eng: "Lyme", county: "Cheshire", zh: "萊姆公園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-lymepark.png" },
+        { id: "N05", zone: "N", eng: "Mount Stewart", county: "County Down", zh: "斯圖爾特山莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-mountstewart.png" },
+        { id: "W01", zone: "W", eng: "Chirk Castle", county: "Wrexham", zh: "奇爾克城堡", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-chirk.png" },
+        { id: "W02", zone: "W", eng: "Tredegar House", county: "Newport", zh: "特雷迪加宅邸", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-tredegarhouse.png" },
+        { id: "W03", zone: "W", eng: "Killerton", county: "Devon", zh: "基勒頓莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-killerton.png" },
+        { id: "W04", zone: "W", eng: "Kingston Lacy", county: "Dorset", zh: "金斯頓萊西莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-kingstonlacy.png" },
+        { id: "W05", zone: "W", eng: "Lacock", county: "Wiltshire", zh: "萊科克修道院", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-lacock.png" },
+        { id: "W06", zone: "W", eng: "Stourhead", county: "Wiltshire", zh: "斯托海德花園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-stourhead.png" },
+        { id: "W07", zone: "W", eng: "Trelissick", county: "Cornwall", zh: "特雷利西克花園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-trelissick.png" },
+        { id: "W08", zone: "W", eng: "Tyntesfield", county: "North Somerset", zh: "廷茨菲爾德莊園", bgUrl: DITTO + BG_PREFIXES.lc + "nationaltrust-tyntesfield.png" }
       ]
     },
-    { id: "gotour2026_tainan", type: "single-bg", storageKey: "pogo_gotour26_tn_v1", title: "🏮 2026 GO Tour：台南 (Tainan)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 台南・13 張", bgType: "lc", locStamp: "Tainan", bgCandidates: [DITTO + BG_PREFIXES.lc + "go-tour-2026-tainan.webp"], coverPokes: [716, 717, 448], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER },
-    { id: "gotour2026_la", type: "single-bg", storageKey: "pogo_gotour26_la_v1", title: "🌴 2026 GO Tour：洛杉磯 (Los Angeles)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 洛杉磯・13 張", bgType: "lc", locStamp: "Los Angeles", bgCandidates: [DITTO + BG_PREFIXES.lc + "go-tour-2026-los-angeles.webp"], coverPokes: [716, 717, 445], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER }
+    { id: "gotour2026_tainan", type: "single-bg", storageKey: "pogo_gotour26_tn_v1", title: "🏮 2026 GO Tour：台南 (Tainan)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 台南・13 張", bgType: "lc", locStamp: "Tainan", bgUrl: DITTO + BG_PREFIXES.lc + "go-tour-2026-tainan.webp", coverPokes: [716, 717, 448], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER },
+    { id: "gotour2026_la", type: "single-bg", storageKey: "pogo_gotour26_la_v1", title: "🌴 2026 GO Tour：洛杉磯 (Los Angeles)", subtitle: "白天團體戰 (7隻) ＋ 超級之夜團體戰 (6隻)", tag: "2026 洛杉磯・13 張", bgType: "lc", locStamp: "Los Angeles", bgUrl: DITTO + BG_PREFIXES.lc + "go-tour-2026-los-angeles.webp", coverPokes: [716, 717, 445], filters: GOTOUR_2026_FILTERS, roster: GOTOUR_2026_ROSTER }
   ];
 
-  return { BG_PREFIXES: BG_PREFIXES, FAMILIES: FAMILIES, COLLECTIONS: COLLECTIONS, DITTO_BASE: DITTO };
+  return { BG_PREFIXES: BG_PREFIXES, FAMILIES: FAMILIES, COLLECTIONS: COLLECTIONS };
 })();
