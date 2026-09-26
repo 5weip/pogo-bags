@@ -34,8 +34,8 @@ window.POGO_DATA = (function() {
     ] },
     xerneas: { label: "☀️哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716, stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "頭目" }] },
     yveltal: { label: "☀️伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717, stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "頭目" }] },
-    Victreebel: { label: "☀️大食花", baseName: "大食花", baseDex: 71, stages: [{ key: "s0", name: "大食花", dex: 71, stage: "頭目" }] }
-    Malamar: { label: "☀️烏賊王", baseName: "烏賊王", baseDex: 687, stages: [{ key: "s0", name: "烏賊王", dex: 687, stage: "頭目" }] }   
+    Victreebel: { label: "☀️大食花", baseName: "大食花", baseDex: 71, stages: [{ key: "s0", name: "大食花", dex: 71, stage: "頭目" }] },
+    Malamar: { label: "☀️烏賊王", baseName: "烏賊王", baseDex: 687, stages: [{ key: "s0", name: "烏賊王", dex: 687, stage: "頭目" }] },  
     gyarados: { label: "☀️暴鯉龍", baseName: "暴鯉龍", baseDex: 130, stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }] },
     gardevoir: { label: "☀️沙奈朵", baseName: "沙奈朵", baseDex: 282, stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }] },
     absol: { label: "☀️阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359, stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }] },
