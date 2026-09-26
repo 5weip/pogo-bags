@@ -29,15 +29,15 @@ window.POGO_DATA = (function() {
     seedot: { label: "橡實果進化鏈", baseName: "橡實果", baseDex: 273, stages: [
       { key: "r0", name: "橡實果", dex: 273, stage: "一階" }, { key: "r1", name: "長鼻葉", dex: 274, stage: "二階" }, { key: "r2", name: "狡猾天狗", dex: 275, stage: "三階" }
     ] },
-    honedge: { label: "☀️獨劍鞘進化鏈", baseName: "獨劍鞘", baseDex: 679, stages: [
+    honedge: { label: "獨劍鞘進化鏈", baseName: "獨劍鞘", baseDex: 679, stages: [
       { key: "s0", name: "獨劍鞘", dex: 679, stage: "一階" }, { key: "s1", name: "雙劍鞘", dex: 680, stage: "二階" }, { key: "s2", name: "堅盾劍怪", dex: 681, stage: "三階" }
     ] },
-    xerneas: { label: "☀️哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716, stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "頭目" }] },
-    yveltal: { label: "☀️伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717, stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "頭目" }] },
-    gyarados: { label: "☀️暴鯉龍", baseName: "暴鯉龍", baseDex: 130, stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }] },
-    gardevoir: { label: "☀️沙奈朵", baseName: "沙奈朵", baseDex: 282, stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }] },
-    absol: { label: "☀️阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359, stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }] },
-    lucario: { label: "☀️路卡利歐", baseName: "路卡利歐", baseDex: 448, stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "頭目" }] },
+    xerneas: { label: "哲爾尼亞斯", baseName: "哲爾尼亞斯", baseDex: 716, stages: [{ key: "s0", name: "哲爾尼亞斯", dex: 716, stage: "頭目" }] },
+    yveltal: { label: "伊裴爾塔爾", baseName: "伊裴爾塔爾", baseDex: 717, stages: [{ key: "s0", name: "伊裴爾塔爾", dex: 717, stage: "頭目" }] },
+    gyarados: { label: "暴鯉龍", baseName: "暴鯉龍", baseDex: 130, stages: [{ key: "s0", name: "暴鯉龍", dex: 130, stage: "頭目" }] },
+    gardevoir: { label: "沙奈朵", baseName: "沙奈朵", baseDex: 282, stages: [{ key: "s0", name: "沙奈朵", dex: 282, stage: "頭目" }] },
+    absol: { label: "阿勃梭魯", baseName: "阿勃梭魯", baseDex: 359, stages: [{ key: "s0", name: "阿勃梭魯", dex: 359, stage: "頭目" }] },
+    lucario: { label: "路卡利歐", baseName: "路卡利歐", baseDex: 448, stages: [{ key: "s0", name: "路卡利歐", dex: 448, stage: "頭目" }] },
     charizard: { label: "🌙超級之夜：噴火龍", baseName: "噴火龍", baseDex: 6, stages: [{ key: "s0", name: "噴火龍", dex: 6, stage: "頭目" }] },
     ampharos: { label: "🌙超級之夜：電龍", baseName: "電龍", baseDex: 181, stages: [{ key: "s0", name: "電龍", dex: 181, stage: "頭目" }] },
     salamence: { label: "🌙超級之夜：暴飛龍", baseName: "暴飛龍", baseDex: 373, stages: [{ key: "s0", name: "暴飛龍", dex: 373, stage: "頭目" }] },
@@ -54,7 +54,7 @@ window.POGO_DATA = (function() {
     { id: "P12", zone: "NIGHT", fam: "garchomp", note: "🌙 超級之夜" }, { id: "P13", zone: "NIGHT", fam: "sceptile", note: "🌙 超級之夜" }
   ];
   var GOTOUR_2026_FILTERS = [
-    { key: "ALL", label: "全部(13)" }, { key: "DAY", label: "☀️(7)" }, { key: "NIGHT", label: "🌙 超級之夜(6)" }, { key: "MISS", label: "未收齊" }
+    { key: "ALL", label: "全部(13)" }, { key: "DAY", label: "(7)" }, { key: "NIGHT", label: "🌙 超級之夜(6)" }, { key: "MISS", label: "未收齊" }
   ];
 
   // 每個地標只要給「bgKey(圖片檔名關鍵字，不含前綴跟副檔名)」，
