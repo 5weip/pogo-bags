@@ -145,7 +145,6 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
 
   var FAMILIES = DATA.FAMILIES;
   var COLLECTIONS = DATA.COLLECTIONS;
-  var DITTO_NT_BASE = DATA.DITTO_BASE;
   var PM_ADDR_BASE = "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon%20-%20256x256/Addressable%20Assets/";
   var PM_ICON_BASE = "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon%20-%20256x256/";
 
@@ -163,9 +162,32 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
     showToast("✨ 此背卡已由「色背」自動連動解鎖！若要取消，請切換至色背模式操作。");
   }
 
+  // ---- 背景圖自動嘗試多種副檔名機制 ----
+  // resolvedBgByCol：卡冊等級的背景圖（single-bg 卡冊 + 首頁封面）
+  // resolvedBgByLoc：地標等級的背景圖（multi-location 卡冊裡每個地標各自的圖）
+  var resolvedBgByCol = {};
+  var resolvedBgByLoc = {};
+
+  // 依序試候選網址清單，哪個先載入成功就用哪個；全部失敗就退回第一個候選（至少畫面一致）
+  function probeCandidates(candidates, onResolved) {
+    (function probe(idx) {
+      if (idx >= candidates.length) { onResolved(candidates[0]); return; }
+      var img = new Image();
+      img.onload = function() { onResolved(candidates[idx]); };
+      img.onerror = function() { probe(idx + 1); };
+      img.src = candidates[idx];
+    })(0);
+  }
+
+  function updateBgEls(attrName, attrValue, url) {
+    var els = document.querySelectorAll("[" + attrName + "='" + attrValue + "']");
+    Array.prototype.forEach.call(els, function(el) {
+      el.style.backgroundImage = "url('" + url + "')";
+    });
+  }
+
   var statesByCol = {};
   var storageAvailable = true;
-  var resolvedBgByCol = {};
 
   COLLECTIONS.forEach(function(col) {
     statesByCol[col.id] = {};
@@ -176,23 +198,29 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
       storageAvailable = false;
     }
 
-    if (col.bgCandidates && col.bgCandidates.length) {
-      resolvedBgByCol[col.id] = col.bgCandidates[0];
-      (function probeBg(c, idx) {
-        if (idx >= c.bgCandidates.length) return;
-        var img = new Image();
-        img.onload = function() {
-          resolvedBgByCol[c.id] = c.bgCandidates[idx];
-          var bgEls = document.querySelectorAll("[data-col-bg='" + c.id + "']");
-          Array.prototype.forEach.call(bgEls, function(el) {
-            el.style.backgroundImage = "url('" + c.bgCandidates[idx] + "')";
-          });
-        };
-        img.onerror = function() { probeBg(c, idx + 1); };
-        img.src = c.bgCandidates[idx];
-      })(col, 0);
-    } else if (col.coverBg) {
-      resolvedBgByCol[col.id] = col.coverBg;
+    if (col.type === "single-bg") {
+      var colCandidates = DATA.bgCandidates(col.bgType, col.bgKey);
+      resolvedBgByCol[col.id] = colCandidates[0];
+      probeCandidates(colCandidates, function(url) {
+        resolvedBgByCol[col.id] = url;
+        updateBgEls("data-col-bg", col.id, url);
+      });
+    } else if (col.type === "multi-location") {
+      col.locations.forEach(function(loc) {
+        var locKey = col.id + "|" + loc.id;
+        var locCandidates = DATA.bgCandidates(loc.bgType || col.bgType, loc.bgKey);
+        resolvedBgByLoc[locKey] = locCandidates[0];
+        probeCandidates(locCandidates, function(url) {
+          resolvedBgByLoc[locKey] = url;
+          updateBgEls("data-loc-bg", locKey, url);
+        });
+      });
+      var coverCandidates = DATA.bgCandidates(col.bgType, col.coverBgKey);
+      resolvedBgByCol[col.id] = coverCandidates[0];
+      probeCandidates(coverCandidates, function(url) {
+        resolvedBgByCol[col.id] = url;
+        updateBgEls("data-col-bg", col.id, url);
+      });
     }
   });
 
@@ -297,12 +325,14 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
     return "«span class='evo-dots' aria-hidden='true'»" + dots + "«/span»";
   }
 
-  function buildPokeCardHtml(col, itemId, stampText, bgUrl, famKey, isOwned, unlockedByShinyInNorm, isShiny, dotsHtml, showModeBtnInCard) {
+  // itemBgAttr / itemBgKey：用來讓卡片標上 data-col-bg 或 data-loc-bg，
+  // 這樣即使背景圖是稍後才探測成功的，畫面也會自動補上，不用重新整理頁面。
+  function buildPokeCardHtml(itemBgAttr, itemBgKey, itemId, stampText, bgUrl, famKey, isOwned, unlockedByShinyInNorm, isShiny, dotsHtml, showModeBtnInCard) {
     var fam = FAMILIES[famKey];
     var sparkleHtml = isShiny ? "«div class='sparkles' aria-hidden='true'»«span class='sp1'»✨«/span»«span class='sp2'»✨«/span»«span class='sp3'»✦«/span»«/div»" : "";
     var badgeText = isOwned ? (unlockedByShinyInNorm ? "✨ 色背已連動" : "✓ 已擁有") : "+ 點此打勾";
     var badgeExtraCls = unlockedByShinyInNorm ? "from-shiny" : "";
-    var bgAttr = col.type === "single-bg" ? (" data-col-bg='" + escapeHtml(col.id) + "'") : "";
+    var bgAttr = " " + itemBgAttr + "='" + escapeHtml(itemBgKey) + "'";
     var modeTagHtml = showModeBtnInCard
       ? "«button type='button' class='ver-tag-btn " + (isShiny ? "" : "norm") + "' data-action='toggle-mode' data-id='" + escapeHtml(itemId) + "' title='切換此卡色背/普背'»" + (isShiny ? "✨ 色背 🔄" : "普背 🔄") + "«/button»"
       : "«span class='ver-tag " + (isShiny ? "" : "norm") + "'»" + (isShiny ? "✨ 色背" : "普背") + "«/span»";
@@ -346,7 +376,7 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
       grandCard += st.cardTotal;
       grandMax += st.maxCards;
       var pct = st.maxCards ? Math.round(st.shinyTotal / st.maxCards * 100) : 0;
-      var bgUrl = resolvedBgByCol[col.id] || col.coverBg || "";
+      var bgUrl = resolvedBgByCol[col.id] || "";
       var pokesHtml = (col.coverPokes || []).map(function(dex) {
         return pogoImgHtml(dex, true, "封面寶可夢", "album-poke");
       }).join("");
@@ -421,11 +451,12 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
         var isShiny = !st.isNormal;
         var tOwnedView = isFamilyOwnedInView(st, "treecko", st.isNormal);
         var rOwnedView = isFamilyOwnedInView(st, raidFamKey, st.isNormal);
-        var bgUrl = DITTO_NT_BASE + loc.slug + ".png";
+        var locKey = col.id + "|" + loc.id;
+        var bgUrl = resolvedBgByLoc[locKey] || "";
         var stamp = loc.eng + " • " + loc.county;
 
-        var cardT = buildPokeCardHtml(col, loc.id, stamp, bgUrl, "treecko", tOwnedView, (st.isNormal && tShiny), isShiny, buildDotsHtml(st, "treecko"), false);
-        var cardR = buildPokeCardHtml(col, loc.id, stamp, bgUrl, raidFamKey, rOwnedView, (st.isNormal && rShiny), isShiny, buildDotsHtml(st, raidFamKey), false);
+        var cardT = buildPokeCardHtml("data-loc-bg", locKey, loc.id, stamp, bgUrl, "treecko", tOwnedView, (st.isNormal && tShiny), isShiny, buildDotsHtml(st, "treecko"), false);
+        var cardR = buildPokeCardHtml("data-loc-bg", locKey, loc.id, stamp, bgUrl, raidFamKey, rOwnedView, (st.isNormal && rShiny), isShiny, buildDotsHtml(st, raidFamKey), false);
 
         boxes.push([
           "«div class='set-box'»",
@@ -452,13 +483,13 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
         var shOwned = isFamilyOwnedInView(st, r.fam, false);
         if (filter === "MISS" && shOwned) return;
         if (["ALL", "MISS"].indexOf(filter) === -1 && r.zone !== filter) return;
-        var searchable = (r.id + " " + fam.baseName + " " + r.fam + " " + r.note).toLowerCase();
+        var searchable = (r.id + " " + fam.baseName + " " + r.fam + " " + (r.note || "")).toLowerCase();
         if (query && searchable.indexOf(query) === -1) return;
 
         var isShiny = !st.isNormal;
         var ownedView = isFamilyOwnedInView(st, r.fam, st.isNormal);
         singleCards.push(
-          buildPokeCardHtml(col, r.id, col.locStamp + "｜" + r.note, bgUrl, r.fam, ownedView, (st.isNormal && shOwned), isShiny, buildDotsHtml(st, r.fam), true)
+          buildPokeCardHtml("data-col-bg", col.id, r.id, col.locStamp + (r.note ? "｜" + r.note : ""), bgUrl, r.fam, ownedView, (st.isNormal && shOwned), isShiny, buildDotsHtml(st, r.fam), true)
         );
       });
       cardsAreaHtml = "«main class='single-poke-grid' id='grid'»" + singleCards.join("") + "«/main»";
@@ -517,7 +548,7 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
       var loc = col.locations.find(function(x) { return x.id === itemId; });
       if (!loc) return;
       titlePrefix = loc.eng + " (" + loc.zh + ")";
-      bgUrl = DITTO_NT_BASE + loc.slug + ".png";
+      bgUrl = resolvedBgByLoc[col.id + "|" + loc.id] || "";
       stampText = loc.eng;
     } else {
       titlePrefix = col.title;
