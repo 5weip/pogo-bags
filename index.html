@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Pokémon GO 背卡收藏總圖鑑</title>
+<title>Pokémon GO 背卡圖鑑</title>
 <style>
 :root{--bg:#0b1120;--panel:#1e293b;--card:#0f172a;--text:#f8fafc;--sub:#94a3b8;--acc:#38bdf8;--ok:#10b981;--sh:#f59e0b;}
 *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif;}
@@ -95,7 +95,7 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
 <div class="modal-box" id="evoModalContent"></div>
 </div>
 <div class="toast" id="toastMsg" role="status" aria-live="polite"></div>
-<footer>本工具為粉絲自製非營利收藏紀錄工具，寶可夢模型串接自 PokeMiners，背卡串接自 Dittobase。</footer>
+<footer>本工具為玩家自製非營利收藏紀錄工具，寶可夢模型串接自 PokeMiners，背卡串接自 Dittobase。</footer>
 <script src="./data.js"></script>
 <script>
 (function mainAppScript() {
@@ -159,7 +159,7 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
   }
 
   function warnLockedByShiny() {
-    showToast("✨ 此背卡已由「色背」自動連動解鎖！若要取消，請切換至色背模式操作。");
+    showToast("✨ 此背卡已經由「色背」自動解鎖！若要取消，請切換至色背模式操作。");
   }
 
   // ---- 背景圖自動嘗試多種副檔名機制 ----
@@ -408,7 +408,7 @@ footer{margin-top:28px;text-align:center;font-size:0.72rem;color:#64748b;line-he
 
     renderTemplate(container, [
       "«header»",
-      "  «h1»✨ Pokémon GO 背卡收藏總圖鑑«/h1»",
+      "  «h1»✨ Pokémon GO 背卡圖鑑«/h1»",
       "  «div class='sub-header'»選擇下方活動卡冊進入打勾｜所有進度自動獨立保存在本機瀏覽器«/div»",
       "  «div class='prog-wrap'»",
       "    «div class='prog-text'»",
